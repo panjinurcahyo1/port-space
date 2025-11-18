@@ -567,6 +567,69 @@
             100% { opacity: 1; }
         }
 
+       /* Achievements Section */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.achievement-card {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.achievement-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 80px rgba(139, 92, 246, 0.4);
+}
+
+.achievement-icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+.achievement-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.5));
+}
+
+@keyframes iconFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.achievement-content h4 {
+    color: #60a5fa;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.achievement-date {
+    color: #8b5cf6;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(139, 92, 246, 0.1);
+    border-radius: 20px;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.achievement-content p {
+    color: #cbd5e1;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
         /* Projects Section */
         .projects-grid {
             display: grid;
@@ -979,6 +1042,32 @@
                     transparent 100%);
             }
 
+/* Achievements Mobile */
+.achievements-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.achievement-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+}
+
+.achievement-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.achievement-content h4 {
+    font-size: 1.1rem;
+}
+
+.achievement-content p {
+    font-size: 0.95rem;
+}
+
             /* Projects Mobile */
             .projects-grid {
                 grid-template-columns: 1fr;
@@ -1261,6 +1350,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -1291,7 +1381,7 @@
             <div class="card">
                 <div class="about-content">
                     <div>
-                        <img src="assets/profil.jpg" alt="Profile" class="profile-img">
+                        <img src="assets/739061.JPG" alt="Profile" class="profile-img">
                     </div>
                     <div class="about-text">
                         <h3>Hybrid Developer-Designer</h3>
@@ -1352,6 +1442,57 @@
         </div>
     </section>
 
+<!-- Achievements Section -->
+<section id="achievements">
+    <div class="container">
+        <h2 class="section-title">My Achievements</h2>
+        <div class="achievements-grid">
+
+            <!-- Tennis Achievements -->
+            <div class="card achievement-card">
+                <div class="achievement-icon">
+                    <img src="assets/tennis2.png" alt="Trophy">
+                </div>
+                <div class="achievement-content">
+                    <h4>Tennis Achievements</h4>
+                    <div class="achievement-date">2018 – 2022</div>
+                    <p>
+                        Highlights:<br>
+                        • 1st Place AFR Remaja Tenis – Bandung (2018)<br>
+                        • 1st Runner Up ACS Tennis Open Series 1 (2019)<br>
+                        • 1st Place ACS Tennis Open Series 2 (2019)<br>
+                        • 3rd Place AFR Remaja Tenis – Bandung (2019)<br>
+                        • 3rd Place UTR Infinite Double Challenge (2021)<br>
+                        • Quarter Finalist PORPROV Jawa Barat (2022)
+                    </p>
+                </div>
+            </div>
+
+            <!-- Padel Achievements -->
+            <div class="card achievement-card">
+                <div class="achievement-icon">
+                    <img src="assets/padel.png" alt="Award">
+                </div>
+                <div class="achievement-content">
+                    <h4>Padel Achievements</h4>
+                    <div class="achievement-date">2025</div>
+                    <p>
+                        • Semifinalist Padel Parteh WalikotaCup (2025)<br>
+                        • 1st Runner Up Man Lower Bronze – Daily Serve Tourney (2025)
+                    </p>
+                </div>
+            </div>
+
+            <!-- Competitive Ratings -->
+            
+
+        </div>
+    </div>
+</section>
+
+
+
+
     <section id="projects">
         <div class="container">
             <h2 class="section-title">My Projects</h2>
@@ -1388,7 +1529,7 @@
     <section id="skills">
         <div class="container">
             <h2 class="section-title">My Skills</h2>
-            <div class="card">
+
                 <div class="skills-grid">
                     <div class="skill-item">
                         <div class="skill-icon">
@@ -1419,7 +1560,7 @@
                         <p>Figma, Capcut, Photoshop, Filmora</p>
                     </div>
                 </div>
-            </div>
+            
         </div>
     </section>
 
@@ -1427,7 +1568,7 @@
     <section id="contact">
         <div class="container">
             <h2 class="section-title">Connect with Me</h2>
-            <div class="card">
+
                 <div class="contact-grid">
                     <div class="contact-item">
                         <div class="contact-icon">
@@ -1461,12 +1602,12 @@
                         <a href="mailto:panjinurcahyo2309@gmail.com">Click to email me!</a>
                     </div>
                 </div>
-            </div>
+
         </div>
     </section>
 
     <footer class="footer">
-        <p>&copy; 2025 Panji's Space Portfolio 🚀</p>
+        <p>&copy; 2025 Panji's Portfolio 🚀</p>
     </footer>
 
     <script>
